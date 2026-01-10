@@ -1,47 +1,70 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f2f2f2;
+    background: #f4f6f8;
 }
 
 header {
-    background: black;
+    background: #0f172a;
     color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-box {
     text-align: center;
-    padding: 20px;
+    padding: 15px;
+}
+
+.search-box input {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
 }
 
 .products {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
-    padding: 30px;
-    flex-wrap: wrap;
+    padding: 20px;
 }
 
-.card {
+.product {
     background: white;
-    width: 220px;
     padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     text-align: center;
-    border-radius: 8px;
+    transition: 0.3s;
 }
 
-.card img {
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
     width: 100%;
+    height: 150px;
+    object-fit: contain;
 }
 
-button {
-    background: black;
-    color: white;
-    border: none;
+.price {
+    color: green;
+    font-weight: bold;
+}
+
+.product button {
+    width: 100%;
     padding: 10px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 10px;
+.product button:hover {
+    background: #1e40af;
 }
